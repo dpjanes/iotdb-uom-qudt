@@ -19,5 +19,5 @@
     "scripts": {
         "test": "npm test --recursive --bail"
     }, 
-    "version": "1.0.0"
+    "version": "1.0.1"
 }
