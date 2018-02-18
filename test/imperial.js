@@ -29,23 +29,33 @@ imperial.load()
 
 const assert = require("assert")
 
-describe("metric", function() {
-    it("gram-kilogram", function() {
-        const expected = 1.234;
+describe("imperial", function() {
+    it("pound-kilogram", function() {
+        const expected = 1.361
         const actual = _.convert.convert({
-            from: "unit:Gram",
+            from: "unit:PoundMass",
             to: "unit:Kilogram",
-            value: 1234,
+            value: 3,
         });
 
         assert.deepEqual(actual, expected)
     })
-    it("kilogram-gram", function() {
-        const expected = 5432
+    it("pound-gram", function() {
+        const expected = 1360.777
         const actual = _.convert.convert({
-            from: "unit:Kilogram",
+            from: "unit:PoundMass",
             to: "unit:Gram",
-            value: 5.432,
+            value: 3,
+        });
+
+        assert.deepEqual(actual, expected)
+    })
+    it("carat-gram", function() {
+        const expected = 3.2
+        const actual = _.convert.convert({
+            from: "unit:Carat",
+            to: "unit:Gram",
+            value: 16,
         });
 
         assert.deepEqual(actual, expected)

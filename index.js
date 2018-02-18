@@ -3,7 +3,7 @@
  *
  *  David Janes
  *  IOTDB.org
- *  2016-02-04
+ *  2018-02-18
  *
  *  Copyright [2013-2018] [David P. Janes]
  *
@@ -29,6 +29,7 @@ const load = () => {
     const _ = require("iotdb-helpers")
 
     _.convert.add(require('./mass').metric);
+    _.convert.add(require('./mass').imperial);
 }
 
 /**

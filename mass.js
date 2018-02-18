@@ -3,7 +3,7 @@
  *
  *  David Janes
  *  IOTDB.org
- *  2016-02-05
+ *  2018-02-18
  *
  *  Copyright [2013-2018] [David P. Janes]
  *
@@ -22,95 +22,24 @@
 
 "use strict";
 
-const imperial = [
+const metric = [
     {
-        from: 'iot-unit:volume.imperial.cup',
-        to: 'iot-unit:volume.imperial.fluid-ounce',
-        multiply: 8,
-    },
-    {
-        from: 'iot-unit:volume.imperial.pint',
-        to: 'iot-unit:volume.imperial.cup',
-        multiply: 2,
-    },
-    {
-        from: 'iot-unit:volume.imperial.pint',
-        to: 'iot-unit:volume.imperial.gallon',
-        multiply: .25,
-    },
-    {
-        from: 'iot-unit:volume.imperial.pint',
-        to: 'iot-unit:volume.imperial.gill',
-        multiply: 4,
-    },
-    {
-        from: 'iot-unit:volume.imperial.pint',
-        to: 'iot-unit:volume.si.liter',
-        multiply: 0.56826125,
-    },
-    {
-        from: 'iot-unit:volume.imperial.tablespoon',
-        to: 'iot-unit:volume.imperial.teaspoon',
-        multiply: 3,
-    },
-    {
-        from: 'iot-unit:volume.imperial.cup',
-        to: 'iot-unit:volume.imperial.tablespoon',
-        multiply: 16,
-    },
-    {
-        from: 'iot-unit:volume.imperial.quart',
-        to: 'iot-unit:volume.imperial.cup',
-        multiply: 4,
+        from: "unit:Kilogram",
+        to: "unit:Gram",
+        multiply: 1000,
     },
 ];
 
-const us = [
-    // US 
+const imperial = [
     {
-        from: 'iot-unit:volume.us.cup',
-        to: 'iot-unit:volume.us.fluid-ounce',
-        multiply: 8,
+        from: "unit:PoundMass",
+        to: "unit:Kilogram",
+        multiply: 0.45359237,
     },
     {
-        from: 'iot-unit:volume.us.pint',
-        to: 'iot-unit:volume.us.dram',
-        multiply: 128,
-    },
-    {
-        from: 'iot-unit:volume.us.pint',
-        to: 'iot-unit:volume.us.cup',
-        multiply: 2,
-    },
-    {
-        from: 'iot-unit:volume.us.pint',
-        to: 'iot-unit:volume.us.gallon',
-        multiply: .25,
-    },
-    {
-        from: 'iot-unit:volume.us.pint',
-        to: 'iot-unit:volume.us.gill',
-        multiply: 4,
-    },
-    {
-        from: 'iot-unit:volume.us.pint',
-        to: 'iot-unit:volume.si.liter',
-        multiply: .473176473,
-    },
-    {
-        from: 'iot-unit:volume.us.tablespoon',
-        to: 'iot-unit:volume.us.teaspoon',
-        multiply: 3,
-    },
-    {
-        from: 'iot-unit:volume.us.cup',
-        to: 'iot-unit:volume.us.tablespoon',
-        multiply: 16,
-    },
-    {
-        from: 'iot-unit:volume.us.quart',
-        to: 'iot-unit:volume.us.cup',
-        multiply: 4,
+        from: "unit:Gram",
+        to: "unit:Carat",
+        multiply: 5,
     },
 ];
 
@@ -118,4 +47,4 @@ const us = [
  *  API
  */
 exports.imperial = imperial;
-exports.us = us;
+exports.metric = metric;
