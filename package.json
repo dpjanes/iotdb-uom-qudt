@@ -17,7 +17,7 @@
         "url": "https://github.com/dpjanes/homestar-uom-qudt"
     }, 
     "scripts": {
-        "test": "npm test --recursive --bail"
+        "test": "mocha --recursive --bail"
     }, 
     "version": "1.0.1"
 }

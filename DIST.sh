@@ -27,13 +27,13 @@ echo "=================="
     fi
     mkdir "${NPM_DST}" || exit 1
 
-    update-package --increment-version --package "$PACKAGE" --homestar || exit 1
+    update-package --increment-version --package "$PACKAGE" || exit 1
 
     tar cf - \
         --exclude "node_modules" \
         README.md LICENSE \
-        homestar.json package.json \
-        index.js distance.js \
+        package.json \
+        index.js lib/*.js \
         |
     ( cd "${NPM_DST}" && tar xvf - && npm publish ) || exit 1
     git commit -m "new release" package.json || exit 1

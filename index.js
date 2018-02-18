@@ -28,8 +28,8 @@
 const load = () => {
     const _ = require("iotdb-helpers")
 
-    _.convert.add(require('./mass').metric);
-    _.convert.add(require('./mass').imperial);
+    _.convert.add(require('./lib/mass').metric);
+    _.convert.add(require('./lib/mass').imperial);
 }
 
 /**
