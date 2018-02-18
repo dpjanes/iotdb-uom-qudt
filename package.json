@@ -1,7 +1,7 @@
 {
     "author": "David P. Janes <davidjanes@iotdb.org> (https://iotdb.org)", 
     "bugs": {
-        "url": "https://github.com/dpjanes/homestar-uom-qudt/issues"
+        "url": "https://github.com/dpjanes/iotdb-uom-qudt/issues"
     }, 
     "dependencies": {
         "iotdb-helpers": "~3.2.6"
@@ -10,14 +10,14 @@
     "homepage": "https://github.com/dpjanes/node-iotdb", 
     "license": "Apache-2.0", 
     "main": "index.js", 
-    "name": "homestar-uom-qudt", 
+    "name": "iotdb-uom-qudt", 
     "private": false, 
     "repository": {
         "type": "git", 
-        "url": "https://github.com/dpjanes/homestar-uom-qudt"
+        "url": "https://github.com/dpjanes/iotdb-uom-qudt"
     }, 
     "scripts": {
         "test": "mocha --recursive --bail"
     }, 
-    "version": "1.0.2"
+    "version": "1.0.3"
 }
