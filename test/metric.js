@@ -1,5 +1,5 @@
 /*
- *  index.js
+ *  samples/km_in.js
  *
  *  David Janes
  *  IOTDB.org
@@ -22,16 +22,22 @@
 
 "use strict";
 
-/**
- *  Add to IOTDB
- */
-const load = () => {
-    const _ = require("iotdb-helpers")
+const _ = require("iotdb-helpers")
 
-    _.convert.add(require('./mass').metric);
-}
+const imperial = require("..")
+imperial.load()
 
-/**
- *  API
- */
-exports.load = load;
+const assert = require("assert")
+
+describe("km_in", function() {
+    it("works", function() {
+        const expected = 39370;
+        const actual = _.convert.convert({
+            from: 'iot-unit:length.si.meter.3', // m * 10^3 = km
+            to: 'iot-unit:length.imperial.inch',
+            value: 1
+        });
+
+        assert.deepEqual(actual, expected)
+    })
+})

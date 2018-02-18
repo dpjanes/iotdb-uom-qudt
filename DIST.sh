@@ -6,7 +6,6 @@
 #   2016-02-04
 #
 
-exit 0
 PACKAGE=homestar-uom-qudt
 DIST_ROOT=/var/tmp/.dist.$$
 
@@ -34,8 +33,7 @@ echo "=================="
         --exclude "node_modules" \
         README.md LICENSE \
         homestar.json package.json \
-        UomImperialBridge.js index.js \
-        models/*.js models/*.json \
+        index.js distance.js \
         |
     ( cd "${NPM_DST}" && tar xvf - && npm publish ) || exit 1
     git commit -m "new release" package.json || exit 1

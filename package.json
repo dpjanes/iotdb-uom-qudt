@@ -4,22 +4,10 @@
         "url": "https://github.com/dpjanes/homestar-uom-qudt/issues"
     }, 
     "dependencies": {
-        "iotdb": ">=0.6.3"
+        "iotdb-helpers": "~3.2.6"
     }, 
-    "description": "HomeStar / IOTDB Bridge for UomImperial", 
-    "devDependencies": {
-        "grunt": "~0.4.5", 
-        "grunt-contrib-jshint": "~0.10.0", 
-        "grunt-contrib-nodeunit": "~0.2.0", 
-        "grunt-contrib-uglify": "~0.5.0", 
-        "grunt-contrib-watch": "~0.5.0", 
-        "grunt-jsbeautifier": "^0.2.7", 
-        "jshint-stylish": "~0.1.3", 
-        "load-grunt-tasks": "~0.2.0", 
-        "request": "^2.36.0"
-    }, 
-    "homepage": "https://github.com/dpjanes/node-iotdb",
-    "homestar": {}, 
+    "description": "Imperial Unit converions", 
+    "homepage": "https://github.com/dpjanes/node-iotdb", 
     "license": "Apache-2.0", 
     "main": "index.js", 
     "name": "homestar-uom-qudt", 
@@ -29,7 +17,7 @@
         "url": "https://github.com/dpjanes/homestar-uom-qudt"
     }, 
     "scripts": {
-        "test": "grunt"
+        "test": "npm test --recursive --bail"
     }, 
-    "version": "0.0.0"
+    "version": "1.0.0"
 }
