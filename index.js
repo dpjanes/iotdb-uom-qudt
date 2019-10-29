@@ -30,6 +30,10 @@ const load = () => {
 
     _.convert.add(require('./lib/mass').metric);
     _.convert.add(require('./lib/mass').imperial);
+    _.convert.add(require('./lib/distance').metric);
+    _.convert.add(require('./lib/distance').imperial);
+    _.convert.add(require('./lib/volume').metric);
+    _.convert.add(require('./lib/volume').imperial);
 }
 
 /**

@@ -6,7 +6,7 @@
 #   2016-02-04
 #
 
-PACKAGE=homestar-uom-qudt
+PACKAGE=iotdb-uom-qudt
 DIST_ROOT=/var/tmp/.dist.$$
 
 if [ ! -d "$DIST_ROOT" ]
